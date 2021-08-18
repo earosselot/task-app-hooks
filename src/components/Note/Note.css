@@ -1,0 +1,17 @@
+.Note {
+    background-color: #ff76e2;
+    padding: 10px;
+    border-radius: 5px;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rm-btn {
+    background-color: rgba(0,0,0,0);
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
