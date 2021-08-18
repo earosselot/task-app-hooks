@@ -1,12 +1,14 @@
 import './Note.css'
 import { BiTrash } from 'react-icons/all'
 
-function Note({ text }) {
+function Note({ note, removeTask }) {
 
     return (
             <div className="Note">
-                <span>{text}</span>
-                <button className="rm-btn"><BiTrash size="1.5em" /></button>
+                <span>{note.text}</span>
+                <button className="rm-btn" onClick={() => removeTask(note.id)} >
+                    <BiTrash size="1.5em" />
+                </button>
             </div>
         )
 }

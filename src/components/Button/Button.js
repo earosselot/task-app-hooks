@@ -1,12 +1,14 @@
 import './Button.css'
 
-function Button({ children, onClick }) {
+function Button({ children, handleAddNote, inputText }) {
 
-    function handleButtonClick() {
-        onClick()
-    }
-
-    return <button className="btn" onClick={handleButtonClick}>{children}</button>
+    return (
+        <button 
+            className="btn" 
+            onClick={() => handleAddNote(inputText)}>
+                {children}
+        </button>
+    )
 }
 
 export default Button

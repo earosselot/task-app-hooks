@@ -1,40 +1,36 @@
 import TasksHeader from "../TaskHeader/TasksHeader";
 import TasksList from "../TaskList/TasksList";
-import Input from "../Input/Input";
-import Button from "../Button/Button";
 import './MainApp.css'
-import {useState} from "react";
+import {useState} from "react"
+import uniqid from 'uniqid'
 
 const init_notes = [
-    {id: 1, text: 'note1'},
-    {id: 2, text: 'note2'},
-    {id: 3, text: 'note3'}
+    {id: uniqid(), text: 'note1'},
+    {id: uniqid(), text: 'note2'},
+    {id: uniqid(), text: 'note3'}
 ]
 
 function MainApp() {
     const [notes, setNotes] = useState(init_notes);
-    const [inputText, setInputText] = useState('');
 
-    function handleInputChange(value) {
-        setInputText(value)
+    function handleAddNote(text) {
+        const newNote = {
+            id: uniqid(),
+            text: text
+        }
+        const newNotesList = [...notes, newNote]
+        setNotes(newNotesList)
     }
 
-    function handleAddTask() {
-        setNotes((prevNotes) => {
-            return prevNotes.concat({
-                id: prevNotes.lenght,
-                text: inputText
-            })
-        })
+    function removeTask(noteId) {
+        const filteredNotes = notes.filter(note => note.id !== noteId)
+        setNotes(filteredNotes)
     }
-
+    
     return (
         <div className="MainApp">
-            <TasksHeader>
-                <Input value={inputText} onChange={handleInputChange}/>
-                <Button onClick={handleAddTask} >Add</Button>
-            </TasksHeader>
-            <TasksList notes={notes}/>
+            <TasksHeader handleAddNote={handleAddNote} />
+            <TasksList notes={notes} removeTask={removeTask} />
         </div>
     )
 }
