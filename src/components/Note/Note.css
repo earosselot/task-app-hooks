@@ -9,11 +9,18 @@
 }
 
 .rm-btn {
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0, 0, 0, 0);
     border: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 6px;
+}
+
+.rm-btn:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 .complete {

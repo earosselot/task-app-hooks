@@ -1,9 +1,14 @@
 .App {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  background-color: #8562da;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    background-color: #8562da;
+}
+
+body {
+    margin: 0 auto;
+    background-color: #8562da;
 }

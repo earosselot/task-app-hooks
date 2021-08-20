@@ -1,6 +1,5 @@
-
 function Header() {
-    return <div>ToDos-App</div>
+  return <div>ToDos-App</div>;
 }
 
-export default Header
+export default Header;
